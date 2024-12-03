@@ -1,0 +1,86 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1e88e5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus {
+    border-color: #1e88e5;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #1e88e5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #1e88e5;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+p.error {
+    color: red;
+}
