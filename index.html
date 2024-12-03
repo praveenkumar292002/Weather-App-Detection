@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+    <h1>Weather App</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="city">Enter City Name:</label>
+        <input type="text" id="city" name="city" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    {% if data.error %}
+    <p style="color: red;">{{ data.error }}</p>
+    {% elif data.city %}
+    <h2>Weather in {{ data.city }}</h2>
+    <p>Country Code: {{ data.country_code }}</p>
+    <p>Coordinates: {{ data.coordinate }}</p>
+    <p>Temperature: {{ data.temp }}</p>
+    <p>Pressure: {{ data.pressure }}</p>
+    <p>Humidity: {{ data.humidity }}</p>
+    <p>Description: {{ data.description }}</p>
+    {% endif %}
+</body>
+
+</html>
